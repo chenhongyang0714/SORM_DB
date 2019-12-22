@@ -4,7 +4,7 @@ package com.sorm.core;
   * 负责 针对MySql数据库的操作
  * @author chenhongyang
  *
- */
+ */  
 @SuppressWarnings("all")
 public class MySqlQuery extends Query{
 
