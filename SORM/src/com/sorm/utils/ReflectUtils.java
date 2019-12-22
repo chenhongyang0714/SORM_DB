@@ -51,8 +51,10 @@ public class ReflectUtils {
 
 		// 调用rowObj对象的setUsername(String username)方法，将columnValue的值设置进去
 		try {
-			Method method = rowObj.getClass().getDeclaredMethod("set" + StringUtils.firstChar2UpperCase(columeName), columeValue.getClass());
-			method.invoke(rowObj, columeValue);
+			if(columeValue != null) {
+				Method method = rowObj.getClass().getDeclaredMethod("set" + StringUtils.firstChar2UpperCase(columeName), columeValue.getClass());
+				method.invoke(rowObj, columeValue);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
