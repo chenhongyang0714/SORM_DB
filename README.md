@@ -1,7 +1,7 @@
 您可以在使用之前先下载基于本框架的API文档，初步了解本框架
 ------------------------------------------------------------- 
  
->  下载链接：https://pan.baidu.com/s/1ZFHd7iArSogHO6B4HLBpOw 提取码：h8lh
+>  下载链接：https://pan.baidu.com/s/19qJN0s7GnpkDWNaqQyuDTA  提取码：t21p
 
 使用注意：使用前应先对配置信息(db.properties)进行确认  
   
