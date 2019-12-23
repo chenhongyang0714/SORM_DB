@@ -1,5 +1,9 @@
 package com.sorm.core;
 
+import java.util.List;
+
+import com.study.po.Qqq;
+
 /**
   * 负责 针对MySql数据库的操作
  * @author chenhongyang
@@ -66,6 +70,13 @@ public class MySqlQuery extends Query{
 //		String sql = "select count(*) from qqq where id>?;";  // 返回符合条件的行数
 //		Number number = new MySqlQuery().queryNumber(sql, new Object[] {14});
 //		System.out.println(number);
+		
+		// 通过id进行查询
+//		List<Qqq> list = (List<Qqq>) new MySqlQuery().queryById(Qqq.class, 5);
+//
+//		for(Qqq qqq : list) {
+//			System.out.println(qqq.getName());
+//		}
 	}
 	
 	public static void main(String[] args) {

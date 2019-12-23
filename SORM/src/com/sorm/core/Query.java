@@ -338,13 +338,30 @@ public abstract class Query implements Cloneable{
 	 */
 	public abstract Object queryPagenate(int pageNum, int size);
 	
-	
 	/**
 	 * 实现克隆
 	 */
 	protected Object clone() throws CloneNotSupportedException {
 		return super.clone();
 	}
+	
+	/**
+	 * 根据主键的值直接查找对应的对象
+	 * @param clazz  po类
+	 * @param id  id(主键)
+	 * @return  查询的结果  	
+	 */
+	public Object queryById(Class clazz, Object id) {	
+		// 通过Class对象找与之对应的TableInfo
+		TableInfo tableInfo = TableContext.poClassMap.get(clazz);
+		// 获得主键
+		ColumnInfo onlyPriKey = tableInfo.getOnlyPriKey();
+		
+		String sql = "select *  from " + tableInfo.getTname() + " where " + onlyPriKey.getName() + " = ?";
+		
+		return queryUniqyeRowMyTeacher(sql, clazz, new Object[] {id});
+	}
+	
 }
 
 
